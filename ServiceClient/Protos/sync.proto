@@ -1,0 +1,21 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "SyncService";
+
+package sync;
+
+// The greeting service definition.
+service SyncService {
+  // Sends a greeting
+  rpc SayHello (SyncReq) returns (SyncResp);
+}
+
+// The request message containing the user's name.
+message SyncReq {
+  string name = 1;
+}
+
+// The response message containing the greetings.
+message SyncResp {
+  string message = 1;
+}
